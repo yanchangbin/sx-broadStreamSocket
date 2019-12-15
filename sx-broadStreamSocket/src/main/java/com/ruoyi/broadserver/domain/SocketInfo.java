@@ -1,10 +1,7 @@
 package com.ruoyi.broadserver.domain;
 
-import org.apache.mina.core.session.IoSession;
-
 import java.net.InetAddress;
 import java.nio.ByteBuffer;
-import java.util.Calendar;
 import java.util.Date;
 /*终端通信缓存类*/
 public class SocketInfo {
@@ -147,6 +144,9 @@ public class SocketInfo {
         }else {
             return  null;
         }
+    }
+
+    private class IoSession {
     }
 }
 

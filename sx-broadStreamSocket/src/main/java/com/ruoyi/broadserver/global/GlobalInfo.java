@@ -37,6 +37,12 @@ public class GlobalInfo {
      */
     public static void SendData(byte[] senddata,IoSession session,int Timeout) {
         putThreadintoPool(new Runnable() {
+            class WriteFuture {
+            }
+
+            static class IoBuffer {
+            }
+
             @Override
             public void run() {
                 // IO线程池中运行
@@ -91,5 +97,8 @@ public class GlobalInfo {
 
     public static void setIOTThread(MinaCastThread IOTThread) {
         GlobalInfo.IOTThread = IOTThread;
+    }
+
+    private static class IoSession {
     }
 }
